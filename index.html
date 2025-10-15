@@ -4,82 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kaihōkan – MasTerapia</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
-    body { background: #f3f6fa; color: #222; line-height: 1.6; }
-    header { text-align: center; padding: 3rem 1rem; background: linear-gradient(135deg, #7cc4ff, #004aad); color: white; }
-    header h1 { font-size: 2.5rem; letter-spacing: 1px; }
-    header p { font-size: 1.1rem; margin-top: 0.5rem; }
-
-    nav { display: flex; justify-content: center; gap: 2rem; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 1rem; }
-    nav a { color: #004aad; text-decoration: none; font-weight: 600; position: relative; }
-    nav a::after { content: ""; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #004aad; transition: 0.3s; }
-    nav a:hover::after { width: 100%; }
-
-    section { padding: 4rem 10%; }
-    #hero { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; background: #fff; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-    #hero div { flex: 1 1 45%; padding: 2rem; }
-    #hero h2 { font-size: 2rem; color: #004aad; margin-bottom: 1rem; }
-    #hero p { font-size: 1.1rem; margin-bottom: 1.5rem; }
-    #hero img { flex: 1 1 45%; border-radius: 20px; width: 100%; object-fit: cover; }
-
-    .btn { display: inline-block; background: #004aad; color: white; padding: 0.8rem 1.8rem; border-radius: 25px; text-decoration: none; transition: 0.3s; }
-    .btn:hover { background: #0068e0; }
-
-    #features { background: #eef5ff; text-align: center; }
-    #features h2 { color: #004aad; margin-bottom: 2rem; font-size: 2rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-    .card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
-    .card:hover { transform: translateY(-5px); }
-    .card h3 { color: #004aad; margin-bottom: 0.5rem; }
-
-    #about { text-align: center; background: #fff; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
-    #about h2 { color: #004aad; margin-bottom: 1rem; }
-    #about p { max-width: 800px; margin: 0 auto; font-size: 1.1rem; }
-
-    footer { background: #004aad; color: white; text-align: center; padding: 2rem; }
-    footer a { color: #ffe97a; text-decoration: underline; }
-
-    @media (max-width: 768px) {
-      #hero { flex-direction: column; text-align: center; }
-      #hero div, #hero img { flex: 1 1 100%; }
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>Kaihōkan</h1>
-    <p>MasTerapia – Liberazione e sollievo interiore in un ambiente digitale sicuro</p>
+<body class="bg-gray-50 text-gray-800 scroll-smooth">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-400 to-blue-900 text-white text-center py-28 px-6 clip-path-header">
+    <h1 class="text-5xl font-bold mb-4 tracking-wide">Kaihōkan</h1>
+    <p class="text-xl opacity-90">MasTerapia – Liberazione e sollievo interiore in un ambiente digitale sicuro</p>
   </header>
 
-  <nav>
-    <a href="#hero">Home</a>
-    <a href="#features">Funzionalità</a>
-    <a href="#about">Chi Siamo</a>
-    <a href="#contact">Contatti</a>
+  <!-- Nav -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-center gap-12 py-4">
+      <a href="#hero" class="relative text-blue-900 font-semibold hover:text-blue-700 after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:h-1 after:bg-blue-900 after:rounded after:transition-all hover:after:w-full hover:after:left-0">Home</a>
+      <a href="#features" class="relative text-blue-900 font-semibold hover:text-blue-700 after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:h-1 after:bg-blue-900 after:rounded after:transition-all hover:after:w-full hover:after:left-0">Funzionalità</a>
+      <a href="#about" class="relative text-blue-900 font-semibold hover:text-blue-700 after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:h-1 after:bg-blue-900 after:rounded after:transition-all hover:after:w-full hover:after:left-0">Chi Siamo</a>
+      <a href="#contact" class="relative text-blue-900 font-semibold hover:text-blue-700 after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:h-1 after:bg-blue-900 after:rounded after:transition-all hover:after:w-full hover:after:left-0">Contatti</a>
+    </div>
   </nav>
 
-  <section id="hero">
-    <div>
-      <h2>Benessere Digitale, Umano ed Empatico</h2>
-      <p>Kaihōkan è la piattaforma che ti ascolta: parla, condividi e ritrova la calma.  
-      Tutte le tue conversazioni sono **criptate e anonime**, con garanzia *Feeling Safe*.  
-      Accesso gratuito, trasparente e rispettoso.</p>
-      <a href="#features" class="btn">Scopri di più</a>
+  <!-- Hero -->
+  <section id="hero" class="max-w-6xl mx-auto my-16 px-6 flex flex-col md:flex-row items-center gap-12 bg-white rounded-3xl shadow-lg transform transition-transform hover:-translate-y-2 duration-500">
+    <div class="md:w-1/2">
+      <h2 class="text-4xl font-bold text-blue-900 mb-6">Benessere Digitale, Umano ed Empatico</h2>
+      <p class="text-lg mb-6 opacity-90">
+        Kaihōkan è la piattaforma che ti ascolta: parla, condividi e ritrova la calma.  
+        Tutte le tue conversazioni sono <strong>criptate e anonime</strong>, con garanzia <em>Feeling Safe</em>.  
+        Accesso gratuito, trasparente e rispettoso.
+      </p>
+      <a href="#features" class="inline-block bg-blue-900 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-blue-700 hover:scale-105 transition-transform">Scopri di più</a>
     </div>
-    <img src="" alt="immagine rilassante o meditazione">
+    <div class="md:w-1/2">
+      <img src="" alt="immagine rilassante o meditazione" class="w-full rounded-3xl shadow-xl object-cover">
+    </div>
   </section>
 
-  <section id="features">
-    <h2>Funzionalità Principali</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>IA Empatica</h3>
-        <p>Un assistente virtuale sempre disponibile, con risposte comprensive e personalizzate.</p>
+  <!-- Features -->
+  <section id="features" class="bg-blue-50 py-20 px-6 text-center">
+    <h2 class="text-4xl font-bold text-blue-900 mb-12">Funzionalità Principali</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white rounded-2xl p-8 shadow-lg transform transition-transform hover:-translate-y-4 hover:shadow-2xl">
+        <h3 class="text-2xl font-bold text-blue-900 mb-4">IA Empatica</h3>
+        <p class="opacity-90">Un assistente virtuale sempre disponibile, con risposte comprensive e personalizzate.</p>
       </div>
-      <div class="card">
-        <h3>Community Moderata</h3>
-        <p>Un luogo sicuro per condividere esperienze, senza giudizio e con totale rispetto.</p>
+      <div class="bg-white rounded-2xl p-8 shadow-lg transform transition-transform hover:-translate-y-4 hover:shadow-2xl">
+        <h3 class="text-2xl font-bold text-blue-900 mb-4">Community Moderata</h3>
+        <p class="opacity-90">Un luogo sicuro per condividere esperienze, senza giudizio e con totale rispetto.</p>
       </div>
-      <div class="card">
-        <h3>Area Aziendale</h3>
+      <div class="bg-white rounded-2xl p-8 shadow-lg transform transition-transform hover:-translate-y-4 hover:shadow-2xl">
+        <h3 class="text-2xl font-bold text-blue-900 mb-4">Area Aziendale</h3>
+        <p class="opacity-90">Soluzioni per il benessere dei dipendenti, programmi anti-burnout e workshop digitali.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="bg-white py-20 px-6 text-center border-t border-b border-gray-200">
+    <h2 class="text-4xl font-bold text-blue-900 mb-8">Chi Siamo</h2>
+    <p class="max-w-3xl mx-auto text-lg opacity-90 leading-relaxed">
+      <strong>MasTerapia</strong> nasce per offrire uno spazio digitale dedicato al benessere mentale.  
+      La nostra filosofia si ispira al concetto giapponese di <em>kaihōkan</em>: sentirsi finalmente liberi da ansia, stress e solitudine.  
+      Garantiamo un ambiente etico, rispettoso e realmente utile.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-blue-900 text-white text-center py-16 relative">
+    <p>© 2025 MasTerapia – Kaihōkan | Tutti i diritti riservati</p>
+    <p class="mt-2">Contattaci: <a href="#" class="text-yellow-400 hover:text-yellow-200 underline">info@kaihokan.it</a></p>
+  </footer>
+
+  <style>
+    /* Clip-paths per header e footer più wow */
+    header { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    footer { clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+  </style>
+</body>
+</html>
